@@ -1,1 +1,1 @@
-docker build -t SIGN .
+docker build -t gigacha_sign .

@@ -1,8 +1,10 @@
 docker run --rm -it \
--v /home/$(whoami)/Documents/drone_lidar/workspace:/workspace \
+-v /home/$(whoami)/Documents/GIGACHA_VISION_SIGN/workspace:/workspace \
+-v /home/$(whoami)/Documents/yolo_weights:/workspace/catkin_ws/src/GIGACHA-TensorRT/yolo \
 -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
 -e DISPLAY=unix$DISPLAY \
 --net=host \
 --privileged \
---name SIGN \
-SIGN
+--name gigacha_sign \
+--gpus all \
+gigacha_sign
